@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>الوجهات السياحية | تاجاوال تورز</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR (نفس الصفحة الرئيسية) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">✈️ تاجاوال تورز</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">🏠 الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="destinations.html">🌍 الوجهات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="booking.html">📅 حجوزات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">📞 اتصل بنا</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <div class="container mt-5 pt-5">
+        <div class="alert alert-info alert-dismissible fade show">
+            <strong>🌍 اكتشف العالم!</strong> أكثر من 150 وجهة عالمية تنتظرك
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+        </div>
+
+        <!-- فلتر البحث -->
+        <div class="row mb-4">
+            <div class="col-md-6 mx-auto">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">🔍</span>
+                    </div>
+                    <input type="text" id="filterInput" class="form-control" placeholder="ابحث عن وجهة...">
+                </div>
+            </div>
+        </div>
+
+        <!-- قائمة الوجهات مع فلترة -->
+        <div class="row" id="destinationsRow">
+            <div class="col-lg-4 col-md-6 mb-4 destination-item">
+                <div class="card h-100">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">🇫🇷 باريس، فرنسا</h5>
+                    </div>
+                    <div class="card-body">
+                        <img src="https://via.placeholder.com/350x200" class="img-fluid rounded mb-3">
+                        <p>زيارة برج إيفل، متحف اللوفر، ديزني لاند باريس</p>
+                        <div class="progress progress-custom mb-2">
+                            <div class="progress-bar progress-bar-custom" style="width: 85%">85% مكتمل الحجز</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span class="badge badge-success p-2">⭐ 4.8</span>
+                            <span class="h6 text-primary">من $499</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#parisModal">عرض التفاصيل</button>
+                        <a href="booking.html" class="btn btn-sm btn-primary float-left">احجز الآن</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 destination-item">
+                <div class="card h-100">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0">🇦🇪 دبي، الإمارات</h5>
+                    </div>
+                    <div class="card-body">
+                        <img src="https://via.placeholder.com/350x200" class="img-fluid rounded mb-3">
+                        <p>برج خليفة، دبي مول، سفاري الصحراء، نخلة جميرا</p>
+                        <div class="progress progress-custom mb-2">
+                            <div class="progress-bar progress-bar-custom" style="width: 92%">92% مكتمل الحجز</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span class="badge badge-success p-2">⭐ 4.9</span>
+                            <span class="h6 text-primary">من $599</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#dubaiModal">عرض التفاصيل</button>
+                        <a href="booking.html" class="btn btn-sm btn-primary float-left">احجز الآن</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 destination-item">
+                <div class="card h-100">
+                    <div class="card-header bg-warning text-dark">
+                        <h5 class="mb-0">🇹🇷 اسطنبول، تركيا</h5>
+                    </div>
+                    <div class="card-body">
+                        <img src="https://via.placeholder.com/350x200" class="img-fluid rounded mb-3">
+                        <p>آيا صوفيا، جامع السلطان أحمد، البازار الكبير، البوسفور</p>
+                        <div class="progress progress-custom mb-2">
+                            <div class="progress-bar progress-bar-custom" style="width: 78%">78% مكتمل الحجز</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span class="badge badge-success p-2">⭐ 4.7</span>
+                            <span class="h6 text-primary">من $399</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#istanbulModal">عرض التفاصيل</button>
+                        <a href="booking.html" class="btn btn-sm btn-primary float-left">احجز الآن</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 destination-item">
+                <div class="card h-100">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="mb-0">🇨🇭 سويسرا</h5>
+                    </div>
+                    <div class="card-body">
+                        <img src="https://via.placeholder.com/350x200" class="img-fluid rounded mb-3">
+                        <p>جبال الألب، بحيرة جنيف، إنترلاكن، زيورخ</p>
+                        <div class="progress progress-custom mb-2">
+                            <div class="progress-bar progress-bar-custom" style="width: 65%">65% مكتمل الحجز</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span class="badge badge-success p-2">⭐ 4.9</span>
+                            <span class="h6 text-primary">من $899</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#swissModal">عرض التفاصيل</button>
+                        <a href="booking.html" class="btn btn-sm btn-primary float-left">احجز الآن</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 destination-item">
+                <div class="card h-100">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0">🇲🇻 جزر المالديف</h5>
+                    </div>
+                    <div class="card-body">
+                        <img src="https://via.placeholder.com/350x200" class="img-fluid rounded mb-3">
+                        <p>منتجعات فاخرة، شواطئ بيضاء، غطس في الشعاب المرجانية</p>
+                        <div class="progress progress-custom mb-2">
+                            <div class="progress-bar progress-bar-custom" style="width: 88%">88% مكتمل الحجز</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span class="badge badge-success p-2">⭐ 5.0</span>
+                            <span class="h6 text-primary">من $1299</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#maldivesModal">عرض التفاصيل</button>
+                        <a href="booking.html" class="btn btn-sm btn-primary float-left">احجز الآن</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 destination-item">
+                <div class="card h-100">
+                    <div class="card-header bg-secondary text-white">
+                        <h5 class="mb-0">🇪🇬 مصر</h5>
+                    </div>
+                    <div class="card-body">
+                        <img src="https://via.placeholder.com/350x200" class="img-fluid rounded mb-3">
+                        <p>أهرامات الجيزة، أبو الهول، الأقصر، أسوان، الغردقة</p>
+                        <div class="progress progress-custom mb-2">
+                            <div class="progress-bar progress-bar-custom" style="width: 72%">72% مكتمل الحجز</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span class="badge badge-success p-2">⭐ 4.6</span>
+                            <span class="h6 text-primary">من $349</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#egyptModal">عرض التفاصيل</button>
+                        <a href="booking.html" class="btn btn-sm btn-primary float-left">احجز الآن</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALS -->
+    <div class="modal fade" id="parisModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">🇫🇷 تفاصيل الرحلة - باريس</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="https://via.placeholder.com/300x200" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h6>🌟 الباقة تشمل:</h6>
+                            <ul>
+                                <li>تذاكر طيران ذهاب وعودة</li>
+                                <li>إقامة 5 ليالي في فندق 4 نجوم</li>
+                                <li>جولة سياحية في المدينة</li>
+                                <li>تذكرة دخول برج إيفل</li>
+                                <li>وجبة إفطار يومية</li>
+                            </ul>
+                            <div class="alert alert-success">السعر: $499 للفرد</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal">إغلاق</button>
+                    <a href="booking.html" class="btn btn-primary">احجز الآن</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="dubaiModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">🇦🇪 تفاصيل الرحلة - دبي</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="https://via.placeholder.com/300x200" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h6>🌟 الباقة تشمل:</h6>
+                            <ul>
+                                <li>تذاكر طيران مباشر</li>
+                                <li>إقامة 4 ليالي فندق 5 نجوم</li>
+                                <li>تذكرة برج خليفة</li>
+                                <li>سفاري الصحراء مع العشاء</li>
+                                <li>مواصلات مجانية</li>
+                            </ul>
+                            <div class="alert alert-success">السعر: $599 للفرد</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal">إغلاق</button>
+                    <a href="booking.html" class="btn btn-primary">احجز الآن</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- باقي المودالات بنفس النمط -->
+    <div class="modal fade" id="istanbulModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title">🇹🇷 تفاصيل الرحلة - اسطنبول</h5>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>⭐ الباقة تشمل: طيران، إقامة 6 ليالي، رحلة بوسفور، وجبات</p>
+                    <div class="alert alert-info">السعر: $399</div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal">إغلاق</button>
+                    <a href="booking.html" class="btn btn-primary">احجز</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="swissModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title">🇨🇭 تفاصيل الرحلة - سويسرا</h5>
+                    <button class="close text-white" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>⭐ الباقة تشمل: طيران، إقامة 7 ليالي، جبل ماترهورن، بطاقة النقل</p>
+                    <div class="alert alert-success">السعر: $899</div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal">إغلاق</button>
+                    <a href="booking.html" class="btn btn-primary">احجز</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="maldivesModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title">🇲🇻 تفاصيل الرحلة - المالديف</h5>
+                    <button class="close text-white" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>⭐ الباقة تشمل: طيران، فيلا على الماء 5 ليالي، غطس، وجبات شاملة</p>
+                    <div class="alert alert-warning">السعر: $1299</div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal">إغلاق</button>
+                    <a href="booking.html" class="btn btn-primary">احجز</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="egyptModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary text-white">
+                    <h5 class="modal-title">🇪🇬 تفاصيل الرحلة - مصر</h5>
+                    <button class="close text-white" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>⭐ الباقة تشمل: طيران، إقامة 7 ليالي، جولة أهرامات، مراكب نيلية</p>
+                    <div class="alert alert-success">السعر: $349</div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal">إغلاق</button>
+                    <a href="booking.html" class="btn btn-primary">احجز</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"><h5>✈️ تاجاوال تورز</h5><p>خبراء السفر منذ 2020</p></div>
+                <div class="col-md-4"><h5>روابط</h5><ul class="list-unstyled"><li><a href="index.html" class="text-white-50">الرئيسية</a></li><li><a href="destinations.html" class="text-white-50">الوجهات</a></li></ul></div>
+                <div class="col-md-4"><h5>تواصل</h5><p>📞 9200 12345</p><p>✉️ info@tajawaltours.com</p></div>
+            </div>
+            <hr><div class="text-center"><p>© 2026 تاجاوال تورز - جميع الحقوق محفوظة</p></div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#filterInput").on("keyup", function(){
+                var value = $(this).val().toLowerCase();
+                $("#destinationsRow .destination-item").filter(function(){
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

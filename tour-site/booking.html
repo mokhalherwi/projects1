@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>حجوزات السفر | تاجاوال تورز</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">✈️ تاجاوال تورز</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">🏠 الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinations.html">🌍 الوجهات</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="booking.html">📅 حجوزات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">📞 اتصل بنا</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-5">
+        <h2 class="text-center mb-4 fade-in-up">📅 حجز رحلة الأحلام</h2>
+        
+        <div class="row">
+            <!-- نموذج الحجز -->
+            <div class="col-lg-7">
+                <div class="booking-form zoom-in">
+                    <h4 class="mb-4">معلومات الحجز</h4>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label>👤 الاسم الكامل</label>
+                            <input type="text" class="form-control" placeholder="أدخل اسمك الثلاثي" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>📧 البريد الإلكتروني</label>
+                                <input type="email" class="form-control" placeholder="example@domain.com">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>📱 رقم الهاتف</label>
+                                <input type="tel" class="form-control" placeholder="05xxxxxxxx">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>🌍 الوجهة</label>
+                                <select class="form-control">
+                                    <option>باريس، فرنسا</option>
+                                    <option>دبي، الإمارات</option>
+                                    <option>اسطنبول، تركيا</option>
+                                    <option>سويسرا</option>
+                                    <option>جزر المالديف</option>
+                                    <option>مصر</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label>📅 تاريخ المغادرة</label>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label>📅 تاريخ العودة</label>
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label>👥 عدد البالغين</label>
+                                <input type="number" class="form-control" min="1" value="2">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>👶 عدد الأطفال</label>
+                                <input type="number" class="form-control" min="0" value="0">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>🛏️ نوع الغرفة</label>
+                                <select class="form-control">
+                                    <option>غرفة مفردة</option>
+                                    <option>غرفة مزدوجة</option>
+                                    <option>جناح عائلي</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>💬 ملاحظات إضافية</label>
+                            <textarea class="form-control" rows="3" placeholder="أي طلبات خاصة؟"></textarea>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input type="checkbox" class="form-check-input" id="terms">
+                            <label class="form-check-label" for="terms">أوافق على <a href="#" data-toggle="modal" data-target="#termsModal">الشروط والأحكام</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">
+                            <span class="spinner-border spinner-border-sm d-none" id="submitSpinner"></span>
+                            <span id="submitText">💳 تأكيد الحجز والدفع</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- ملخص الحجز -->
+            <div class="col-lg-5">
+                <div class="card sticky-top" style="top: 100px;">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">🧾 ملخص الحجز</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tr><td>سعر الرحلة للفرد</td><td class="text-left">$500</td></tr>
+                                <tr><td>عدد البالغين</td><td class="text-left">2</td></tr>
+                                <tr><td>خدمات إضافية</td><td class="text-left">$100</td></tr>
+                                <tr class="table-primary"><td><strong>الإجمالي</strong></td><td class="text-left"><strong>$1100</strong></td></tr>
+                            </table>
+                        </div>
+                        <div class="alert alert-info mt-3">
+                            <strong>💰 عرض خاص:</strong> خصم 15% عند الحجز المبكر
+                        </div>
+                        <div class="progress mt-3">
+                            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 60%">
+                                60% مكتمل الحجز
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- عرض العروض الخاصة -->
+                <div class="card mt-3">
+                    <div class="card-header bg-warning">
+                        <h5 class="mb-0">🎁 عروض خاصة</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                تأمين سفر شامل <button class="btn btn-sm btn-outline-primary">أضف +$50</button>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                جولة إضافية <button class="btn btn-sm btn-outline-primary">أضف +$80</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- جدول الحجوزات السابقة -->
+        <h3 class="text-center mt-5">📋 حجوزات سابقة</h3>
+        <div class="table-responsive mt-3">
+            <table class="table table-striped table-bordered table-hover table-custom">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>الوجهة</th>
+                        <th>التاريخ</th>
+                        <th>عدد الأشخاص</th>
+                        <th>الحالة</th>
+                        <th>الإجراء</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>دبي، الإمارات</td>
+                        <td>2026-03-15</td>
+                        <td>4</td>
+                        <td><span class="badge badge-success">مؤكد</span></td>
+                        <td><button class="btn btn-sm btn-info" data-toggle="modal" data-target="#detailsModal">تفاصيل</button></td>
+                    </tr>
+                    <tr class="table-warning">
+                        <td>2</td>
+                        <td>باريس، فرنسا</td>
+                        <td>2026-04-20</td>
+                        <td>2</td>
+                        <td><span class="badge badge-warning">قيد الانتظار</span></td>
+                        <td><button class="btn btn-sm btn-info">تفاصيل</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>اسطنبول، تركيا</td>
+                        <td>2026-05-10</td>
+                        <td>3</td>
+                        <td><span class="badge badge-danger">ملغي</span></td>
+                        <td><button class="btn btn-sm btn-info">تفاصيل</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Modal تفاصيل الحجز -->
+        <div class="modal fade" id="detailsModal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-info text-white">
+                        <h5>تفاصيل الحجز</h5>
+                        <button class="close text-white" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>رقم الحجز:</strong> TX-2026-001</p>
+                        <p><strong>الوجهة:</strong> دبي</p>
+                        <p><strong>التاريخ:</strong> 15 مارس 2026</p>
+                        <div class="alert alert-success">تم إرسال تأكيد الحجز إلى بريدك الإلكتروني</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-dismiss="modal">إغلاق</button>
+                        <button class="btn btn-primary">طباعة</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal الشروط -->
+    <div class="modal fade" id="termsModal">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>الشروط والأحكام</h5>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h6>سياسة الإلغاء:</h6>
+                    <p>يمكنك إلغاء الحجز قبل 14 يوماً من موعد الرحلة لاسترداد 100% من المبلغ.</p>
+                    <h6>سياسة الدفع:</h6>
+                    <p>يتم دفع 30% مقدمًا والباقي قبل 7 أيام من المغادرة.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">أوافق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="text-center">
+                <p>© 2026 تاجاوال تورز - جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#bookingForm').on('submit', function(e){
+                e.preventDefault();
+                $('#submitSpinner').removeClass('d-none');
+                $('#submitText').text('جاري معالجة الحجز...');
+                setTimeout(() => {
+                    $('#submitSpinner').addClass('d-none');
+                    $('#submitText').text('✅ تم الحجز بنجاح! سيتم تحويلك إلى صفحة الدفع');
+                    $('.alert').remove();
+                    $('.booking-form').prepend('<div class="alert alert-success alert-dismissible fade show">🎉 تم استلام طلب حجزك! سنتواصل معك قريباً<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>

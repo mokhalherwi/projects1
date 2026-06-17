@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>اتصل بنا | تاجاوال تورز</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">✈️ تاجاوال تورز</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">🏠 الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinations.html">🌍 الوجهات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="booking.html">📅 حجوزات</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">📞 اتصل بنا</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-5">
+        <div class="row">
+            <div class="col-lg-6 fade-in-up">
+                <h2 class="mb-4">📞 تواصل مع فريق الدعم</h2>
+                <p class="lead">نحن هنا لمساعدتك 24 ساعة طوال أيام الأسبوع</p>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="ml-3"><span class="display-4">📍</span></div>
+                            <div><h5 class="mb-0">الموقع</h5><p>الرياض، المملكة العربية السعودية</p></div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="ml-3"><span class="display-4">📞</span></div>
+                            <div><h5 class="mb-0">الهاتف</h5><p>+966 9200 12345</p></div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="ml-3"><span class="display-4">✉️</span></div>
+                            <div><h5 class="mb-0">البريد الإلكتروني</h5><p>info@tajawaltours.com</p></div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="ml-3"><span class="display-4">🕒</span></div>
+                            <div><h5 class="mb-0">ساعات العمل</h5><p>السبت - الخميس: 9 ص - 9 م</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 slide-in-right">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">✉️ أرسل لنا رسالة</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label>الاسم الكامل</label>
+                                <input type="text" class="form-control" placeholder="أدخل اسمك" required>
+                            </div>
+                            <div class="form-group">
+                                <label>البريد الإلكتروني</label>
+                                <input type="email" class="form-control" placeholder="example@domain.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>رقم الهاتف</label>
+                                <input type="tel" class="form-control" placeholder="05xxxxxxxx">
+                            </div>
+                            <div class="form-group">
+                                <label>نوع الاستفسار</label>
+                                <select class="form-control">
+                                    <option>استفسار عام</option>
+                                    <option>حجوزات</option>
+                                    <option>شكوى أو اقتراح</option>
+                                    <option>شراكات</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>الرسالة</label>
+                                <textarea class="form-control" rows="4" placeholder="اكتب رسالتك هنا..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <span class="spinner-border spinner-border-sm d-none" id="contactSpinner"></span>
+                                <span id="contactText">📨 إرسال الرسالة</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- الخريطة والمعلومات الإضافية -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="alert alert-info text-center">
+                    <strong>💡 نصيحة:</strong> للاستفسارات العاجلة، يرجى الاتصال على الرقم الموحد 9200 12345
+                </div>
+            </div>
+        </div>
+
+        <!-- الأسئلة الشائعة -->
+        <h3 class="text-center mt-5">❓ الأسئلة الشائعة</h3>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <a href="#faq1" class="text-dark" data-toggle="collapse">كيف يمكنني إلغاء الحجز؟</a>
+                    </div>
+                    <div id="faq1" class="collapse">
+                        <div class="card-body">
+                            يمكنك إلغاء الحجز من خلال حسابك أو التواصل مع خدمة العملاء قبل 14 يوماً من موعد الرحلة لاسترداد المبلغ كاملاً.
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <a href="#faq2" class="text-dark" data-toggle="collapse">هل يوجد تأمين سفر شامل؟</a>
+                    </div>
+                    <div id="faq2" class="collapse">
+                        <div class="card-body">
+                            نعم، يمكنك إضافة تأمين سفر شامل يغطي الحوادث الطبية وإلغاء الرحلة مقابل 50$ فقط.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <a href="#faq3" class="text-dark" data-toggle="collapse">ما هي طرق الدفع المتاحة؟</a>
+                    </div>
+                    <div id="faq3" class="collapse">
+                        <div class="card-body">
+                            نقبل جميع بطاقات الائتمان (Visa, Mastercard, Mada) والتحويل البنكي والدفع عند الإستلام.
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <a href="#faq4" class="text-dark" data-toggle="collapse">هل يمكن تغيير تاريخ الرحلة؟</a>
+                    </div>
+                    <div id="faq4" class="collapse">
+                        <div class="card-body">
+                            نعم، يمكنك تغيير تاريخ الرحلة مجاناً قبل 7 أيام من المغادرة (مرة واحدة فقط).
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- قائمة فروعنا -->
+        <h3 class="text-center mt-5">📍 فروعنا</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active">الرياض - الرئيسي</a>
+                    <a href="#" class="list-group-item list-group-item-action">جدة - القرن</a>
+                    <a href="#" class="list-group-item list-group-item-action">الدمام - الظهران</a>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="spinner-grow text-primary"></div>
+                        <span class="mr-2">خرائط جوجل متاحة قريباً</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>✈️ تاجاوال تورز</h5>
+                    <p>شريك سفرك الموثوق حول العالم</p>
+                    <div class="social-icons">
+                        <a href="#" class="btn btn-outline-light btn-sm">📘</a>
+                        <a href="#" class="btn btn-outline-light btn-sm">📷</a>
+                        <a href="#" class="btn btn-outline-light btn-sm">🐦</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>روابط سريعة</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50">الرئيسية</a></li>
+                        <li><a href="destinations.html" class="text-white-50">الوجهات</a></li>
+                        <li><a href="booking.html" class="text-white-50">الحجوزات</a></li>
+                        <li><a href="contact.html" class="text-white-50">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>النشرة البريدية</h5>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="بريدك الإلكتروني">
+                        <div class="input-group-append">
+                            <button class="btn btn-warning">اشتراك</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>© 2026 تاجاوال تورز - جميع الحقوق محفوظة</p>
+                <button class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#newsletterModal">
+                    📧 اشترك في العروض الحصرية
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal النشرة البريدية -->
+    <div class="modal fade" id="newsletterModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5>📧 اشترك في عروضنا الحصرية</h5>
+                    <button class="close text-white" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>احصل على أحدث العروض والخصومات مباشرة إلى بريدك</p>
+                    <input type="email" class="form-control" placeholder="بريدك الإلكتروني">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal">لاحقاً</button>
+                    <button class="btn btn-primary">اشتراك</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#contactForm').on('submit', function(e){
+                e.preventDefault();
+                $('#contactSpinner').removeClass('d-none');
+                $('#contactText').text('جاري الإرسال...');
+                setTimeout(() => {
+                    $('#contactSpinner').addClass('d-none');
+                    $('#contactText').text('✅ تم إرسال رسالتك بنجاح! سنرد عليك خلال 24 ساعة');
+                    $('.card:last').prepend('<div class="alert alert-success alert-dismissible fade show">شكراً لتواصلك معنا! 🎉<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+                    $('#contactForm')[0].reset();
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+</html>
